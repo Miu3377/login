@@ -61,7 +61,7 @@ const login = loginStore();
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 315px;
+    width: 335px;
     height: 550px;
     border-radius: 10px;
     padding: 10px;
@@ -69,6 +69,7 @@ const login = loginStore();
     box-shadow: 0 0 5px inset #de6a67, 5px 11px 5px #a1865c;
     .title {
       margin-top: 10px;
+      margin-bottom: 20px;
       p {
         text-align: center;
         font-size: 2.5rem;
@@ -77,7 +78,8 @@ const login = loginStore();
       }
     }
     .registerInfo {
-      height: 55%;
+      height: 60%;
+      width: 75%;
       div {
         margin-bottom: 10px;
         p {
@@ -85,6 +87,7 @@ const login = loginStore();
           font-size: 0.9rem;
         }
         input {
+          width: 100%;
           border-radius: 16px;
           border: 1px solid burlywood;
           padding: 5px;

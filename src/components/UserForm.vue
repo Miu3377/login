@@ -3,51 +3,44 @@
     <div class="usrSetting">
       <div class="settingContent">
         <div class="text-center mt-2">
-          <p>密碼長度至少8碼(需含大小寫英文+數字)</p>
+          <h2>會員資料</h2>
         </div>
         <table>
           <tbody>
             <tr>
-              <th>輸入舊密碼</th>
+              <th>會員名稱</th>
               <td>
-                <input
-                  type="text"
-                  
-                />
-                <p >密碼不得為空</p>
+                <input type="text" />
+                <p></p>
               </td>
             </tr>
             <tr>
-              <th>輸入新密碼</th>
+              <th>帳號</th>
               <td>
-                <input
-                  type="text"
-                  
-                />
-                <p >密碼不得為空</p>
-                <p >密碼格式錯誤</p>
+                <input type="text" disabled />
+                <p></p>
               </td>
             </tr>
             <tr>
-              <th>確認密碼</th>
+              <th>密碼</th>
               <td>
-                <input
-                  type="text"
-                
-                />
-                <p >密碼不得為空</p>
-                <p >與新密碼不一致</p>
+                <button class="btn btn-primary" @click="login.EditPwd(router)">
+                  修改密碼
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <th>信箱</th>
+              <td>
+                <input type="text" />
+                <p>密碼不得為空</p>
+                <p>與新密碼不一致</p>
               </td>
             </tr>
           </tbody>
         </table>
         <div class="editSubmit">
-          <button
-            class="btn me-4 submit"
-           
-          >
-            確認修改
-          </button>
+          <button class="btn me-4 submit">確認修改</button>
           <nuxt-link to="/usr"
             ><button class="btn cancel">取消</button></nuxt-link
           >
@@ -57,7 +50,15 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { loginStore } from "@/stores/login";
+import { useRouter } from "vue-router";
+
+const login = loginStore();
+const router = useRouter();
+
+
+</script>
 
 <style scoped lang="scss">
 .all {
@@ -73,6 +74,9 @@
     .settingContent {
       position: relative;
       width: 100%;
+      h2 {
+        margin-bottom: 50px;
+      }
       table {
         width: 70%;
         margin: 0 auto;
@@ -92,6 +96,9 @@
             border: 0px solid #ffdbd6;
             padding: 5px;
             background-color: #f0f0f0;
+          }
+          input[type="text"]:disabled {
+            background-color: #d3d2d2;
           }
           input[type="file"] {
             width: 40%;

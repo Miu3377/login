@@ -1,5 +1,6 @@
 import HomePage from "@/page/HomePage.vue";
 import UserPage from "@/page/UserPage.vue";
+import EditPsw from "@/page/EditPsw.vue";
 import { createRouter, createWebHistory } from "vue-router";
 const routes = [
   {
@@ -11,6 +12,10 @@ const routes = [
     path: "/user",
     name: "User",
     component: UserPage,
+  },
+  {
+    path: "/editpsw",
+    component: EditPsw,
   },
 ];
 

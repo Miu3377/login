@@ -8,4 +8,8 @@
 import UserForm from "@/components/UserForm.vue";
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+div {
+  background-color: rgb(244 233 218);
+}
+</style>

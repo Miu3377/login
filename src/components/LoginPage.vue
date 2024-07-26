@@ -54,7 +54,7 @@ const login = loginStore();
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 315px;
+    width: 335px;
     height: 550px;
     border-radius: 10px;
     padding: 10px;
@@ -75,9 +75,11 @@ const login = loginStore();
     }
     .usrInfo {
       margin-top: 40px;
+      width: 75%;
       div {
         margin-bottom: 10px;
         input {
+          width: 100%;
           border-radius: 16px;
           border: 1px solid burlywood;
           padding: 5px;

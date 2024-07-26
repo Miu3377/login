@@ -27,6 +27,12 @@ export const loginStore = defineStore("login", {
      */
     isLogin(router){
         router.push('/user')
+    },
+    /** 
+     * 
+    */
+    EditPwd(router){
+      router.push('/editpsw')
     }
   },
 });
